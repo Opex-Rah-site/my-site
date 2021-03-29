@@ -13,7 +13,7 @@ body {
 }
 
 a {
-  padding: 8px 24px;
+  padding: 10px 10px;
   display: inline-block;
   vertical-align: baseline;
   font-size: 14px;
@@ -26,10 +26,8 @@ a {
 
 a:focus,
 a:hover {
-	border-radius: 20px;
-	border: 1px solid #1A1C41;
   transform: scale(1.2) ;
-	box-shadow: 2px 5px 10px 5px #1A1C41;
+
 }
 
 a:active {
@@ -82,8 +80,7 @@ a:active {
   color: #f9dd79;
 }
 
-.page-header a::after,
-.page-footer a::after {
+.page-header a::after {
   position: absolute;
   content: "";
   bottom: 0;
@@ -356,6 +353,7 @@ a:active {
   background-color: #f9e7a8;
   box-shadow: 0 4px 32px rgba(249, 221, 121, 0.6);
   transform: scale(1.2) ;
+  border-radius: 22px;
 }
 
 .button:active {
@@ -364,8 +362,16 @@ a:active {
 }
 
 .page-footer {
-  padding: 40px 0;
+  margin: 0;
+  padding: 20px 0;
   background-color: #212349;
+}
+
+.page-footer a:focus,
+.page-footer a:hover {
+  -webkit-transform: translate(0,-14px);
+  -moz-transform: translate(0,-14px);
+  -o-transform: translate(0,-14px);
 }
 
 .anim {

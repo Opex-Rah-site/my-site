@@ -16,7 +16,7 @@ a {
   padding: 10px 10px;
   display: inline-block;
   vertical-align: baseline;
-  font-size: 14px;
+  font-size: 20px;
   font-weight: 500;
   letter-spacing: 1px;
   text-decoration: none;
@@ -34,7 +34,9 @@ a:active {
   box-shadow: none;
 }
 
-
+p, span {
+  font-size: 21px;
+}
 .avatar {
 	border-radius: 15px;
 	margin-bottom:-20px;
@@ -85,7 +87,6 @@ a:active {
   content: "";
   bottom: 0;
   left: 0;
-  width: 0;
   height: 2px;
   background-color: #f9dd79;
   transition: width 200ms;
@@ -147,7 +148,7 @@ a:active {
   content: "";
   top: 24px;
   left: calc(50vw - 32px);
-  width: 800px;
+  min-width: 800px;
   height: 800px;
   background-image: url("img/hero-image.svg");
   background-repeat: no-repeat;
@@ -170,7 +171,6 @@ a:active {
   z-index: 1;
   order: 2;
   margin: 0 0 0 -10px;
-  width: 815px;
   font-size: 96px;
   line-height: 112px;
   font-weight: 500;
@@ -215,22 +215,28 @@ a:active {
 }
 
 .user-image {
-  position: absolute;
+  position: relative;
   margin: 0;
   margin-left: 20px;
 }
 
 .user-image img {
+  margin-top: 40px;
+  max-width: 700px;
 	border-radius: 100px;
-  width: 640px;
-  height: 500px;
+  min-height: 500px;
   object-fit: cover;
 }
-
-.intro .container div {
+.me {
+  margin: 10px 30px 70px 10px;
+  max-width: 700px;
+  display: inline;
+  float: right;
+}
+/*.intro .container div {
   margin-left: 720px;
   margin-bottom: 56px;
-}
+}*/
 
 .intro h3,
 .portfolio h3 {
@@ -246,10 +252,12 @@ a:active {
 }
 
 .skills {
+  margin-top: 0px;
   margin-bottom: 0;
 }
 
 .skills h3 {
+  display: inline-flex;
   margin-bottom: 40px;
 }
 
@@ -321,7 +329,6 @@ a:active {
 }
 
 .project-image img {
-  width: 448px;
   height: 256px;
   object-fit: cover;
 }
@@ -385,5 +392,69 @@ a:active {
 }
   30% {
     letter-spacing: 5px;
+  }
+}
+
+@media (min-width: 2080px) {
+  a, span, p {
+    font-size: 1.8em;
+  }
+  .container {
+    max-width: 2500px;
+  }
+  .me {
+    margin-right: 0px;
+  }
+  .skills {
+    float: right;
+    width: 50%;
+  }
+  p {
+    line-height: 50px;
+  }
+  .user-image img {
+    min-width: 1000px;
+    max-height: 600px;
+  }
+}
+
+@media (max-width: 1408px) {
+  .container {
+    max-width: 1300px;
+  }
+}
+
+@media (max-width: 992px) {
+  .container {
+    max-width: 1250px;
+  }
+  a, span, p {
+    font-size: 1.4em;
+  }
+  .user-image img {
+    min-height: 450px;
+  }
+}
+
+@media (max-width: 767px) {
+  .hero-image::before {
+    min-width: 1000px;
+    background-position-x: 200px;
+  }
+  .me {
+    float: left;
+    max-width: 500px;
+  }
+  .skills {
+    position: relative;
+    width: 100%;
+    display: inline-grid;
+  }
+  a, span {
+    font-size: 1.8em;
+  }
+  p {
+    font-size: 2em;
+    line-height: 70px;
   }
 }

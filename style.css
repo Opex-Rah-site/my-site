@@ -370,6 +370,7 @@ p, span {
   min-height: 20px;
   padding: 20px 0;
   background-color: #212349;
+  color: #2312A7;
 }
 
 .page-footer a:focus,
@@ -377,6 +378,11 @@ p, span {
   -webkit-transform: translate(0,-14px);
   -moz-transform: translate(0,-14px);
   -o-transform: translate(0,-14px);
+}
+
+.page-footer a {
+  float: right;
+  margin-right: -4%;
 }
 
 .anim {

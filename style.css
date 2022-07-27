@@ -1,3 +1,6 @@
+html {
+  scroll-behavior: smooth;
+}
 body {
 	zoom:80%;
   position: relative;
@@ -375,9 +378,7 @@ p, span {
 
 .page-footer a:focus,
 .page-footer a:hover {
-  -webkit-transform: translate(0,-14px);
-  -moz-transform: translate(0,-14px);
-  -o-transform: translate(0,-14px);
+ transform: scale(1.1) translate(0px, -6px);
 }
 
 .page-footer a {
